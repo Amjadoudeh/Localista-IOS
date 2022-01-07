@@ -17,10 +17,10 @@ struct ContentView: View {
             List {
                 ForEach(menu) { section in
                     Section(header: Text(section.name)) {
-                    
-                    ForEach(section.items) { item in
-                        ItemRow(item : item)
                         
+                        ForEach(section.items) { item in
+                            ItemRow(item : item)
+                            
                         }
                     }
                 }
