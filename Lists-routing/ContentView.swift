@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    // to fetch out data from the Json file we have to add a new perop where we must decode the Json file using a function provided in our Helper file in the Bundler extension
+    let menu = Bundle.main.decode([MenuSection].self, from: "menu.json")
+    
     var body: some View {
         NavigationView {
             // static list View
