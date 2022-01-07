@@ -14,13 +14,16 @@ struct ItemDetails: View {
         VStack {
             ZStack (alignment: .bottomTrailing){
                 Image(item.mainImage)
+                    .resizable()
+                    .scaledToFit()
+                // to be allowed to setch and resacle the image and the text
                 Text("Photo:\(item.photoCredit)")
                     .padding(4)
                     .background(Color.black)
                     .font(.caption)
                     .foregroundColor(.white)
                 // just to make it not on the border
-                    .offset(x:-5, y:-5) 
+                    .offset(x:-5, y:-5)
             }
             Text(item.description)
                 .padding()
