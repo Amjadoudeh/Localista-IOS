@@ -25,6 +25,22 @@ struct ItemRow: View {
                 Text(item.name).font(.headline)
                 Text("$\(item.price)")
             }
+            
+            Spacer()
+            
+            // we must add and Id to make unique and the only way to make a string has unique ID is the string itself
+            ForEach(item.restrictions, id: \.self) {
+                restriction in
+                Text(restriction)
+                    .font(.caption)
+                    .fontWeight(.black)
+                    .padding(5)
+                    // if you don't find any color then use balck
+                    .background(colors[restriction,default: .black])
+                    .clipShape(Circle())
+                    .foregroundColor(.white)
+                
+            }
         }
         .padding()
     }
