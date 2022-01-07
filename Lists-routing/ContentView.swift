@@ -9,10 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        List {
-            Text("Web")
-            Text("Backend")
-            Text("IOS")
+        NavigationView {
+            List {
+                Text("Backend")
+                Text("Web")
+                Text("IOS")
+            }
+            .navigationTitle("Core listener")
         }
         .padding()
     }
