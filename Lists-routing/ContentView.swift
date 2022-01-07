@@ -15,11 +15,8 @@ struct ContentView: View {
         NavigationView {
             // static list View
             List {
-                ForEach(menu) { Section in 
-                Text("Backend")
-                Text("Web")
-                Text("IOS")
-                    
+                ForEach(menu) { Section in
+                    Text(Section.name)
                 }
             }
             .navigationTitle("Core listener")
