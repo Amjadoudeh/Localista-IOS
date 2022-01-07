@@ -12,17 +12,31 @@ struct ItemDetails: View {
     
     var body: some View {
         VStack {
-            
-            Text(item.name)
-            Image(item.mainImage)
+            ZStack (alignment: .bottomTrailing){
+                Image(item.mainImage)
+                Text("Photo:\(item.photoCredit)")
+                    .padding(4)
+                    .background(Color.black)
+                    .font(.caption)
+                    .foregroundColor(.white)
+                // just to make it not on the border
+                    .offset(x:-5, y:-5) 
+            }
             Text(item.description)
+                .padding()
+            Spacer()
         }
-        .padding()
+        
+        .navigationTitle(item.name)
+        // to make the title Smaller because it's not the main Page
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct ItemDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ItemDetails(item: MenuItem.example)
+        NavigationView{
+            ItemDetails(item: MenuItem.example)
+        }
     }
 }
