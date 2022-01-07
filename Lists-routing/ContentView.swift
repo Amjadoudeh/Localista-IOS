@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
+            // static list View
             List {
                 Text("Backend")
                 Text("Web")
