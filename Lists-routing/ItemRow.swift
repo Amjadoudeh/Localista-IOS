@@ -9,15 +9,22 @@ import SwiftUI
 
 struct ItemRow: View {
     
-    let Item: MenuItem
+    let item: MenuItem
     
     var body: some View {
-        Text(Item.name)
+        HStack{
+            Image(item.thumbnailImage)
+            VStack(alignment: .leading) {
+                Text(item.name)
+                Text("$\(item.price)")
+            }
+        }
+        .padding()
     }
 }
 
 struct ItemRow_Previews: PreviewProvider {
     static var previews: some View {
-        ItemRow(Item: MenuItem.example)
+        ItemRow(item: MenuItem.example)
     }
 }
