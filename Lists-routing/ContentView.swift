@@ -13,13 +13,18 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            // static list View
+            // dynamic list View
             List {
                 ForEach(menu) { Section in
                     Text(Section.name)
+                    
+                    ForEach(Section.items) { item in
+                        Text(item.name)
+                        
+                    }
                 }
             }
-            .navigationTitle("Core listener")
+            .navigationTitle("Menu")
         }
         .padding()
     }
