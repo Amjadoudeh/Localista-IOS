@@ -19,7 +19,7 @@ struct ContentView: View {
                     Section(header: Text(section.name)) {
                     
                     ForEach(section.items) { item in
-                        Text(item.name)
+                        ItemRow(Item : item)
                         
                         }
                     }
