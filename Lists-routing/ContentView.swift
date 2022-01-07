@@ -15,18 +15,19 @@ struct ContentView: View {
         NavigationView {
             // dynamic list View
             List {
-                ForEach(menu) { Section in
-                    Text(Section.name)
+                ForEach(menu) { section in
+                    Section(header: Text(section.name)) {
                     
-                    ForEach(Section.items) { item in
+                    ForEach(section.items) { item in
                         Text(item.name)
                         
+                        }
                     }
                 }
             }
             .navigationTitle("Menu")
+            .listStyle(GroupedListStyle())
         }
-        .padding()
     }
 }
 
