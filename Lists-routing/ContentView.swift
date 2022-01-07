@@ -19,7 +19,11 @@ struct ContentView: View {
                     Section(header: Text(section.name)) {
                         
                         ForEach(section.items) { item in
-                            ItemRow(item : item)
+                            // creating a link to go the detials of the item
+                            NavigationLink(destination:
+                                            Text(item.name)){
+                                ItemRow(item: item)
+                            }
                             
                         }
                     }
