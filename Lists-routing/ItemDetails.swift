@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ItemDetails: View {
+    // watch the object and if there is any changes then refresh the view
+    @EnvironmentObject var order: Order
     let item: MenuItem
     
     var body: some View {
@@ -40,6 +42,8 @@ struct ItemDetails_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
             ItemDetails(item: MenuItem.example)
+            // adding the example to keep the EnvironmentObject happy and avoid the risk or any fell or crash
+                .environmentObject(Order())
         }
     }
 }

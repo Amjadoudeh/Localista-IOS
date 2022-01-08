@@ -17,6 +17,7 @@ struct Lists_routingApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            // the enviromentObject allowed SwiftUI to share data across all the parts of the app 
                 .environmentObject(order)
         }
     }
