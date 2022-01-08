@@ -16,7 +16,9 @@ struct Lists_routingApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // after adding the MainView page we have to tell the @Main to show the MainView which has ContentView and OrderView
+            MainView()
+           // ContentView()
             // the enviromentObject allowed SwiftUI to share data across all the parts of the app 
                 .environmentObject(order)
         }
