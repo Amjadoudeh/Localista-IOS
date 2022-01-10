@@ -6,28 +6,40 @@
 //
 
 import SwiftUI
+
 struct FullScreenViewModel: View {
     @Environment(\.presentationMode) var presentationMode
+    @State private var NameYourList = ""
     
     var body: some View {
-        VStack {
+        VStack(alignment: .center, spacing: 20){
             HStack{
                 
-                Button("cancel"){}
+                Button("cancel"){
+                    presentationMode.wrappedValue.dismiss()
+                }
                 Spacer(minLength: 3)
-                Text("Create an Order list")
+                Text("Create an Order list").font(.title2)
                 Spacer(minLength: 3)
                 Button("save"){}
             }.padding()
-            Spacer(minLength: 10)
             
+            
+            
+            HStack {
+                TextField("Your List Name", text: $NameYourList)
+                    .textFieldStyle(.roundedBorder)
+            }.padding()
+            Spacer()
             Text("Check Out")
+            Spacer()
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.green)
+            .background(Color.gray.opacity(0.4))
+            
             .edgesIgnoringSafeArea(.all)
-            .onTapGesture {
-                presentationMode.wrappedValue.dismiss()
-            }
+//            .onTapGesture {
+//                presentationMode.wrappedValue.dismiss()
+//            }
             
     }
     
