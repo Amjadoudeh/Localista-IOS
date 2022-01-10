@@ -6,9 +6,26 @@
 //
 
 import SwiftUI
-
+struct FullScreenViewModel: View {
+    @Environment(\.presentationMode) var presentationMode
+    
+    var body: some View {
+        VStack {
+            Text("Check Out")
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.green)
+            .edgesIgnoringSafeArea(.all)
+            .onTapGesture {
+                presentationMode.wrappedValue.dismiss()
+            }
+    }
+    
+}
 struct OrderView: View {
     @EnvironmentObject var order: Order
+    
+    @State private var isPresented = false
+    
     var body: some View {
     // for this page we need a scrolling list of items
         NavigationView{
@@ -23,10 +40,12 @@ struct OrderView: View {
                     }
                 }
                 Section {
-                    NavigationLink(destination:
-                                    Text("Check out")) {
-                        Text("Place Order")
+                    Button("Place Order") {
+                        self.isPresented.toggle()
                     }
+                    .fullScreenCover(isPresented: $isPresented, content: FullScreenViewModel.init)
+                    }
+                    
                     
                 }
             }
@@ -34,7 +53,8 @@ struct OrderView: View {
             .listStyle(InsetGroupedListStyle())
         }
     }
-}
+
+
 
 struct OrderView_Previews: PreviewProvider {
     static var previews: some View {
