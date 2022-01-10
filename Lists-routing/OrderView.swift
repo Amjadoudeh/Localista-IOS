@@ -11,6 +11,16 @@ struct FullScreenViewModel: View {
     
     var body: some View {
         VStack {
+            HStack{
+                
+                Button("cancel"){}
+                Spacer(minLength: 3)
+                Text("Create an Order list")
+                Spacer(minLength: 3)
+                Button("save"){}
+            }.padding()
+            Spacer(minLength: 10)
+            
             Text("Check Out")
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.green)
@@ -18,6 +28,7 @@ struct FullScreenViewModel: View {
             .onTapGesture {
                 presentationMode.wrappedValue.dismiss()
             }
+            
     }
     
 }
@@ -43,7 +54,7 @@ struct OrderView: View {
                     Button("Place Order") {
                         self.isPresented.toggle()
                     }
-                    .fullScreenCover(isPresented: $isPresented, content: FullScreenViewModel.init)
+                    .sheet(isPresented: $isPresented, content: FullScreenViewModel.init)
                     }
                     
                     
