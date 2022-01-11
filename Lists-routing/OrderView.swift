@@ -63,10 +63,13 @@ struct OrderView: View {
                     }
                 }
                 Section {
-                    Button("Place Order") {
-                        self.isPresented.toggle()
+                    NavigationLink(destination: CheckoutView()) {
+                        Text("Place Order")
                     }
-                    .sheet(isPresented: $isPresented, content: FullScreenViewModel.init)
+//                    Button("Place Order") {                 self.isPresented.toggle()
+//
+//                    }
+//                    .sheet(isPresented: $isPresented, content: FullScreenViewModel.init)
                     }
                     
                     
