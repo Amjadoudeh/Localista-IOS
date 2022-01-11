@@ -45,6 +45,12 @@ struct CheckoutView: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
             }
+            
+            Section(header: Text("TOTAL: 100$ ")) {
+                Button("Confirm order") {
+                    // place order
+                }
+            }
         }
         .navigationTitle("Payment")
         .navigationBarTitleDisplayMode(.inline)
