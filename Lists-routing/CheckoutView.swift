@@ -28,9 +28,10 @@ struct CheckoutView: View {
                 
                 Toggle("Add Localista loyalty card",
                         isOn:$addLoyaltyDetails)
+                if addLoyaltyDetails {
                 TextField("Enter your Localista ID",
                           text: $loyaltyNumber)
-                
+                }
                 
             }
         }
