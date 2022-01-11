@@ -27,7 +27,7 @@ struct CheckoutView: View {
                 }
                 
                 Toggle("Add Localista loyalty card",
-                        isOn:$addLoyaltyDetails)
+                       isOn:$addLoyaltyDetails.animation())
                 if addLoyaltyDetails {
                 TextField("Enter your Localista ID",
                           text: $loyaltyNumber)
