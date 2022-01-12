@@ -72,6 +72,7 @@ struct OrderView: View {
                     //                    }
                     //                    .sheet(isPresented: $isPresented, content: FullScreenViewModel.init)
                 }
+                .disabled(order.items.isEmpty)
                 
                 
             }
