@@ -75,9 +75,13 @@ struct OrderView: View {
                 
                 
             }
+            
+            .navigationTitle("Order")
+            .listStyle(InsetGroupedListStyle())
+            .toolbar {
+                EditButton()
+            }
         }
-        .navigationTitle("Order")
-        .listStyle(InsetGroupedListStyle())
     }
     
     func deleteItem(at offsets: IndexSet) {
