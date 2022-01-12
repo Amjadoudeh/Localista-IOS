@@ -35,12 +35,12 @@ struct FullScreenViewModel: View {
             Spacer()
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.gray.opacity(0.4))
-            
+        
             .edgesIgnoringSafeArea(.all)
-//            .onTapGesture {
-//                presentationMode.wrappedValue.dismiss()
-//            }
-            
+        //            .onTapGesture {
+        //                presentationMode.wrappedValue.dismiss()
+        //            }
+        
     }
     
 }
@@ -50,7 +50,7 @@ struct OrderView: View {
     @State private var isPresented = false
     
     var body: some View {
-    // for this page we need a scrolling list of items
+        // for this page we need a scrolling list of items
         NavigationView{
             List {
                 Section {
@@ -61,24 +61,30 @@ struct OrderView: View {
                             Text("$\(item.price)")
                         }
                     }
+                    .onDelete(perform: deleteItem)
                 }
                 Section {
                     NavigationLink(destination: CheckoutView()) {
                         Text("Place Order")
                     }
-//                    Button("Place Order") {                 self.isPresented.toggle()
-//
-//                    }
-//                    .sheet(isPresented: $isPresented, content: FullScreenViewModel.init)
-                    }
-                    
-                    
+                    //                    Button("Place Order") {                 self.isPresented.toggle()
+                    //
+                    //                    }
+                    //                    .sheet(isPresented: $isPresented, content: FullScreenViewModel.init)
                 }
+                
+                
             }
-            .navigationTitle("Order")
-            .listStyle(InsetGroupedListStyle())
         }
+        .navigationTitle("Order")
+        .listStyle(InsetGroupedListStyle())
     }
+    
+    func deleteItem(at offsets: IndexSet) {
+        order.items.remove(atOffsets: offsets )
+    }
+    
+}
 
 
 
