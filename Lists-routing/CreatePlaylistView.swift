@@ -15,7 +15,7 @@ struct CreatePlaylistView: View {
     var body: some View {
         
         NavigationView {
-            Text("")
+            Text("here you go")
                 .navigationBarTitle("Master view", displayMode: .inline)
             .navigationBarItems(trailing:
                 HStack {
