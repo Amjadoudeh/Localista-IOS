@@ -124,10 +124,10 @@
 				7076827D2788865200E2A5AF /* ItemDetails.swift */,
 				7076827F278A468E00E2A5AF /* OrderView.swift */,
 				70768283278E357B00E2A5AF /* CheckoutView.swift */,
+				70768285278EF72B00E2A5AF /* CreatePlaylistView.swift */,
 				70768281278A4B3000E2A5AF /* MainView.swift */,
 				70AE845B2788427100A1EF88 /* Assets.xcassets */,
 				70AE845D2788427100A1EF88 /* Preview Content */,
-				70768285278EF72B00E2A5AF /* CreatePlaylistView.swift */,
 			);
 			path = "Lists-routing";
 			sourceTree = "<group>";
