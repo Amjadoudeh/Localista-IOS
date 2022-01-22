@@ -17,7 +17,7 @@
 		70768282278A4B3000E2A5AF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70768281278A4B3000E2A5AF /* MainView.swift */; };
 		70768284278E357B00E2A5AF /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70768283278E357B00E2A5AF /* CheckoutView.swift */; };
 		70768286278EF72B00E2A5AF /* CreatePlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70768285278EF72B00E2A5AF /* CreatePlaylistView.swift */; };
-		70AE84582788426F00A1EF88 /* Lists_routingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE84572788426F00A1EF88 /* Lists_routingApp.swift */; };
+		70AE84582788426F00A1EF88 /* Loclista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE84572788426F00A1EF88 /* Loclista.swift */; };
 		70AE845A2788426F00A1EF88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE84592788426F00A1EF88 /* ContentView.swift */; };
 		70AE845C2788427100A1EF88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70AE845B2788427100A1EF88 /* Assets.xcassets */; };
 		70AE845F2788427100A1EF88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70AE845E2788427100A1EF88 /* Preview Assets.xcassets */; };
@@ -54,8 +54,8 @@
 		70768281278A4B3000E2A5AF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		70768283278E357B00E2A5AF /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		70768285278EF72B00E2A5AF /* CreatePlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaylistView.swift; sourceTree = "<group>"; usesTabs = 0; };
-		70AE84542788426F00A1EF88 /* Lists-routing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lists-routing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		70AE84572788426F00A1EF88 /* Lists_routingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists_routingApp.swift; sourceTree = "<group>"; };
+		70AE84542788426F00A1EF88 /* Localista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Localista.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70AE84572788426F00A1EF88 /* Loclista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loclista.swift; sourceTree = "<group>"; };
 		70AE84592788426F00A1EF88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70AE845B2788427100A1EF88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70AE845E2788427100A1EF88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		70AE84552788426F00A1EF88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				70AE84542788426F00A1EF88 /* Lists-routing.app */,
+				70AE84542788426F00A1EF88 /* Localista.app */,
 				70AE84642788427100A1EF88 /* Lists-routingTests.xctest */,
 				70AE846E2788427100A1EF88 /* Lists-routingUITests.xctest */,
 			);
@@ -114,7 +114,7 @@
 		70AE84562788426F00A1EF88 /* Lists-routing */ = {
 			isa = PBXGroup;
 			children = (
-				70AE84572788426F00A1EF88 /* Lists_routingApp.swift */,
+				70AE84572788426F00A1EF88 /* Loclista.swift */,
 				70768275278856AC00E2A5AF /* Helper.swift */,
 				70768273278856AC00E2A5AF /* menu.json */,
 				70768276278856AC00E2A5AF /* Menu.swift */,
@@ -174,7 +174,7 @@
 			);
 			name = "Lists-routing";
 			productName = "Lists-routing";
-			productReference = 70AE84542788426F00A1EF88 /* Lists-routing.app */;
+			productReference = 70AE84542788426F00A1EF88 /* Localista.app */;
 			productType = "com.apple.product-type.application";
 		};
 		70AE84632788427100A1EF88 /* Lists-routingTests */ = {
@@ -294,7 +294,7 @@
 				70768286278EF72B00E2A5AF /* CreatePlaylistView.swift in Sources */,
 				70768280278A468E00E2A5AF /* OrderView.swift in Sources */,
 				70AE845A2788426F00A1EF88 /* ContentView.swift in Sources */,
-				70AE84582788426F00A1EF88 /* Lists_routingApp.swift in Sources */,
+				70AE84582788426F00A1EF88 /* Loclista.swift in Sources */,
 				7076827C2788733600E2A5AF /* ItemRow.swift in Sources */,
 				7076827E2788865200E2A5AF /* ItemDetails.swift in Sources */,
 				70768279278856AC00E2A5AF /* Helper.swift in Sources */,
@@ -473,7 +473,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "amjad.oudeh-SoundCloud.com.Lists-routing";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Localista;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -502,7 +502,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "amjad.oudeh-SoundCloud.com.Lists-routing";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Localista;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
