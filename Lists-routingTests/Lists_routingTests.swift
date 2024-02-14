@@ -1,12 +1,5 @@
-//
-//  Lists_routingTests.swift
-//  Lists-routingTests
-//
-//  Created by Amjad Oudeh on 07.01.22.
-//
-
 import XCTest
-@testable import Lists_routing
+
 
 class Lists_routingTests: XCTestCase {
 

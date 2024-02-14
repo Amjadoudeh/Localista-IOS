@@ -1,10 +1,3 @@
-//
-//  MainView.swift
-//  Lists-routing
-//
-//  Created by Amjad Oudeh on 08.01.22.
-//
-
 import SwiftUI
 
 struct MainView: View {

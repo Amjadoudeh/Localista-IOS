@@ -1,10 +1,3 @@
-//
-//  CheckoutView.swift
-//  Lists-routing
-//
-//  Created by Amjad Oudeh on 11.01.22.
-//
-
 import SwiftUI
 
 struct CheckoutView: View {

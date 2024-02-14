@@ -1,10 +1,3 @@
-//
-//  Lists_routingUITestsLaunchTests.swift
-//  Lists-routingUITests
-//
-//  Created by Amjad Oudeh on 07.01.22.
-//
-
 import XCTest
 
 class Lists_routingUITestsLaunchTests: XCTestCase {

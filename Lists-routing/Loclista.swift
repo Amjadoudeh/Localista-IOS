@@ -1,10 +1,3 @@
-//
-//  Lists_routingApp.swift
-//  Lists-routing
-//
-//  Created by Amjad Oudeh on 07.01.22.
-//
-
 import SwiftUI
 
 @main
